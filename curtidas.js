@@ -18,9 +18,10 @@ return;
  post.metricas.curtidas++;
  console.log('Post de @${post.autor} agora tem $ {}post.metricas.curtidas.');
 
+ //Remove uma curtida - não deixar ir abaixo de zero
  function descurtir(feed, id){
     const post = feed[0].id === id ? feed[0]:
-                feed[1].id === id ? feed [1] : feed[2];
+
  }
 
  if(post.metricas.curtidas === 0) {
@@ -32,3 +33,4 @@ return;
  console.log(`💔 curtida removida. Total ${post.metricas.curtidas}`);
 
  curtir(feedJSON, 1);
+ descurtir(feedJSON, 2);
